@@ -1,4 +1,4 @@
-npm install firebase
+-> npm install firebase
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -21,3 +21,24 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+
+To host your site with Firebase Hosting, you need the Firebase CLI (a command line tool).
+
+Run the following npm command to install the CLI or update to the latest CLI version.
+-> npm install -g firebase-tools
+
+-> firebase login
+
+-> firebase init
+
+{
+  "hosting": {
+    "site": "destion-innovations-d31a2",
+
+    "public": "public",
+    ...
+  }
+}
+
+-> firebase deploy --only hosting:destion-innovations-d31a2
