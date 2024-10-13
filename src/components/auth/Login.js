@@ -45,6 +45,7 @@ const Login = () => {
       console.error(error.message);
     }
   };
+  
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
       <form onSubmit={formik.handleSubmit} className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-lg">
