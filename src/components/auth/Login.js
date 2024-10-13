@@ -38,15 +38,13 @@ const Login = () => {
   });
 
   const handleGoogleLogin = async () => {
-    setError(null); 
     try {
       await signInWithPopup(auth, googleProvider);
       navigate("/dashboard");
     } catch (error) {
-      setError("Google login failed. Please try again.");
+      console.error(error.message);
     }
   };
-
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
       <form onSubmit={formik.handleSubmit} className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-lg">
